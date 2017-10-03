@@ -15,12 +15,12 @@ done
 for i in $(ls -R $PLUGIN_DIR | awk ' /:$/&&f{s=$0;f=0} /:$/&&!f{sub(/:$/,"");s=$0;f=1;next} NF&&f{ print s"/"$0 }')
 do 
 	PLUGIN_ELEM=${i#$PLUGIN_DIR}
-	echo $PLUGIN_ELEM
 	if [  "${PLUGIN_ELEM}" != '/install.sh' ] && [ "${PLUGIN_ELEM}" != '/uninstall.sh' ]
 	then
 		if [ ! -e "${GW_DIR}${PLUGIN_ELEM}" ] || [ -L "${GW_DIR}${PLUGIN_ELEM}" ]
 		then
 			ln -sf $i ${GW_DIR}${PLUGIN_ELEM}
+			echo "$PLUGIN_ELEM installed"
 		fi
 	fi
 done

@@ -1,0 +1,14 @@
+<?php
+
+define('QGIS_VERSION', '2.14.11-Essen');
+define('QGIS_QUALIFIED_NAME', 'http://mrcc.com/qgis.dtd');
+define('QGIS_SAVE_PATH', 'public/admin/export/');
+define('QGIS_SQL_PATH', '/srv/geoweb/sql/qgis_project');
+define('QGIS_PROJECT_URL', PUBLIC_URL.'admin/export/');
+define('QGIS_LAYERS_SCHEMA', 'qgis_layers');
+define('QGIS_OUTLINE_WIDTH', '0.26');
+define('QGIS_LINE_WIDTH', '0.26');
+define('QGIS_FONTMARKER_SIZE', '6');
+define('QGIS_SIMPLEMARKER_SIZE', '2');
+define('QGIS_FONT', 'Sans Serif');
+define('QGIS_FORCE_FONT', 0);
